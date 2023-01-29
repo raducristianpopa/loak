@@ -1,6 +1,7 @@
 {
     "name": "@loak/config",
     "files": [
+        "tailwind.js",
         "tsconfig.base.json",
         "tsconfig.next.json"
     ],
