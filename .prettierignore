@@ -1,0 +1,7 @@
+.github/*
+.next
+public
+dist
+pnpm-lock.yaml
+*.svg
+Dockerfile
