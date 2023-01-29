@@ -1,0 +1,36 @@
+{
+	"name": "loak",
+	"description": "Create short URLs",
+	"homepage": "https://github.com/raducristianpopa/loak#readme",
+	"bugs": "https://github.com/raducristianpopa/loak/issues",
+	"license": "AGPL-3.0",
+	"author": "Radu-Cristian Popa <praducristian at gmail dot com> (https://radu.gg/)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/raducristianpopa/loak"
+	},
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"typecheck": "turbo typecheck"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"prettier": "latest",
+		"turbo": "latest"
+	},
+	"engines": {
+		"pnpm": ">=7.14.0",
+		"npm": "pnpm",
+		"yarn": "pnpm",
+		"node": "18"
+	},
+	"private": true,
+	"packageManager": "pnpm@7.26.0",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	]
+}
