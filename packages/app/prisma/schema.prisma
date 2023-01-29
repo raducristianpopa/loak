@@ -1,0 +1,67 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider     = "mysql"
+    url          = env("DATABASE_URL")
+    relationMode = "prisma"
+}
+
+model User {
+    id      String @id @default(cuid())
+    clerkId String @unique
+
+    username String
+    email    String @unique
+    avatarId String @default(cuid())
+
+    categories Category[]
+    Link       Link[]
+}
+
+model Category {
+    id   String @id @default(cuid())
+    name String
+    slug String @unique
+
+    user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+    userId String
+
+    links Link[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    // For PlanetScale
+    @@index([userId])
+}
+
+model Link {
+    id        String  @id @default(cuid())
+    // The default domain will be 'lo-ak.click' until custom domains will be suported
+    domain    String // Domain of the link – will stored in Redis too
+    // Generated random key or custom - '/twitter' or '/84843131'
+    key       String // Link key  - stored in redis
+    targetUrl String // Where we should redirect
+    // User have the option to archive links
+    // This will bring down their usage
+    archived  Boolean @default(false)
+
+    clicks Int @default(0) // number of clicks
+
+    user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+    userId String?
+
+    category   Category? @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+    categoryId String?
+
+    expiresAt DateTime? // Link expiry time – stored on Redis too
+    createdAt DateTime  @default(now())
+    updatedAt DateTime  @updatedAt
+
+    @@unique([domain, key])
+    // For PlanetScale
+    @@index([userId])
+    @@index([categoryId])
+}
