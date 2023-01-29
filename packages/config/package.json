@@ -1,9 +1,9 @@
 {
-	"name": "tsconfig",
-	"version": "0.0.0",
-	"private": true,
-	"files": [
-		"tsconfig.base.json",
-		"tsconfig.next.json"
-	]
+    "name": "@loak/config",
+    "version": "0.0.0",
+    "private": true,
+    "files": [
+        "tsconfig.base.json",
+        "tsconfig.next.json"
+    ]
 }
