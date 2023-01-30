@@ -7,7 +7,7 @@ import {
 import { cx } from "class-variance-authority";
 import { useRouter } from "next/router";
 
-import { TabProps } from "@/components/Header";
+import { type TabProps } from "@/components/Header";
 import { Link } from "@/ui/Link";
 
 interface MobileNavigationProps {

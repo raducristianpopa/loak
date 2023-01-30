@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-import ButtonOrLink, { ButtonOrLinkProps } from "./ButtonOrLink";
+import ButtonOrLink, { type ButtonOrLinkProps } from "./ButtonOrLink";
 
 type LinkProps = ButtonOrLinkProps;
 

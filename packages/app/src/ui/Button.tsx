@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import { VariantProps, cva } from "class-variance-authority";
-import ButtonOrLink, { ButtonOrLinkProps } from "./ButtonOrLink";
+import { type VariantProps, cva } from "class-variance-authority";
+import ButtonOrLink, { type ButtonOrLinkProps } from "./ButtonOrLink";
 
 const buttonStyles = cva("inline-flex items-center justify-center", {
   variants: {

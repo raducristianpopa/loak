@@ -1,7 +1,7 @@
 import { type NextApiRequest, type NextApiResponse } from "next";
 import { Webhook, type WebhookRequiredHeaders } from "svix";
 import { buffer } from "micro";
-import { IncomingHttpHeaders } from "http";
+import { type IncomingHttpHeaders } from "http";
 import { type Event, WebhookEventType, createUser } from "@/lib/webhooks";
 
 // Add Svix headers to the request
