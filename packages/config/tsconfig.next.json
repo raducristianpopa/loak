@@ -6,11 +6,6 @@
         "noEmit": true,
         "isolatedModules": true,
         "allowJs": true,
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ],
         "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"]

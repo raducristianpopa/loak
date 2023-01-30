@@ -7,7 +7,10 @@
     },
     "dependencies": {
         "@clerk/nextjs": "^4.8.0",
+        "@headlessui/react": "^1.7.8",
+        "@heroicons/react": "^2.0.14",
         "@next/font": "13.1.6",
+        "class-variance-authority": "^0.4.0",
         "micro": "^10.0.1",
         "next": "13.1.6",
         "react": "18.2.0",

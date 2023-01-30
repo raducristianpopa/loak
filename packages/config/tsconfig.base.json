@@ -5,7 +5,7 @@
         /* Basic Options */
         // "incremental": true,                         /* Enable incremental compilation */
         "target": "ES2020" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */,
-        "module": "ESNext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
+        "module": "CommonJS" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
         // "lib": [],                                   /* Specify library files to be included in the compilation. */
         // "allowJs": true,                             /* Allow javascript files to be compiled. */
         // "checkJs": true,                             /* Report errors in .js files. */
@@ -69,7 +69,6 @@
         "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
         "resolveJsonModule": true /* Enable importing .json files */,
         "suppressImplicitAnyIndexErrors": true /* Suppress noImplicitAny errors when indexing objects that lack index signatures. */,
-        "noUncheckedIndexedAccess": true /* Add undefined to a type when accessed using an index. */,
-        "exactOptionalPropertyTypes": true /* Differentiate between undefined and not present when type checking */
+        "noUncheckedIndexedAccess": true /* Add undefined to a type when accessed using an index. */
     }
 }

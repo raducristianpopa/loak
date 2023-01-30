@@ -24,13 +24,11 @@ module.exports = {
     plugins: ["react", "@typescript-eslint"],
     rules: {
         "no-var": "error",
-        "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/no-non-null-assertion": "off",
+        "react/react-in-jsx-scope": "off",
         "@typescript-eslint/no-unused-vars": [
             "warn",
             { argsIgnorePattern: "^_", destructuredArrayIgnorePattern: "^_" },
         ],
-        "react/react-in-jsx-scope": "off",
     },
     ignorePatterns: ["**/*.js", "**/*.json", "node_modules", "dist"],
     settings: {

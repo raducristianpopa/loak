@@ -19,7 +19,7 @@ export default withClerkMiddleware((req: NextRequest) => {
         const homeUrl = new URL("/", req.url);
         return NextResponse.redirect(homeUrl);
     }
-    console.log(req);
+
     // If there is no user and the path is not public, redirect to sign-in
     if (!userId && !isPublic) {
         const signInUrl = new URL("/sign-in", req.url);
