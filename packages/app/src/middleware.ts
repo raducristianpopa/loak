@@ -1,5 +1,4 @@
-import { withClerkMiddleware } from "@clerk/nextjs/server";
-import { getAuth } from "@clerk/nextjs/server";
+import { getAuth, withClerkMiddleware } from "@clerk/nextjs/server";
 import { NextResponse, type NextRequest } from "next/server";
 
 const publicPaths = ["/sign-in*", "/api/clerk*"];

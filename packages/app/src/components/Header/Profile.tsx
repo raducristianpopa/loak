@@ -1,11 +1,16 @@
-import { Fragment } from "react";
+import { useAuth } from "@clerk/nextjs";
 import { Menu, Transition } from "@headlessui/react";
 import {
-  UserCircleIcon,
   ArrowLeftOnRectangleIcon,
+  UserCircleIcon,
 } from "@heroicons/react/24/outline";
+import { useRouter } from "next/router";
+import { Fragment } from "react";
 
 export const Profile = () => {
+  const { push } = useRouter();
+  const { signOut } = useAuth();
+
   return (
     <Menu as="div" className="relative ml-4 flex-shrink-0">
       <div>
@@ -24,6 +29,10 @@ export const Profile = () => {
           <Menu.Item
             as="button"
             className="flex w-full items-center px-4 py-2 text-accent-5 hover:bg-accent-3 hover:text-white focus:outline-none"
+            onClick={() => {
+              signOut();
+              push("/sign-in");
+            }}
           >
             <ArrowLeftOnRectangleIcon
               className="mr-2 h-6 w-6"

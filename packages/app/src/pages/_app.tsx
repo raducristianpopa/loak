@@ -1,7 +1,7 @@
 import "@/styles/main.css";
-import type { AppProps } from "next/app";
-import { Rubik, Karla } from "@next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Karla, Rubik } from "@next/font/google";
+import type { AppProps } from "next/app";
 
 const rubik = Rubik({
   subsets: ["latin"],

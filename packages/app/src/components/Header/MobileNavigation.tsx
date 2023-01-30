@@ -1,21 +1,23 @@
-import { Fragment } from "react";
-import { Transition, Popover } from "@headlessui/react";
+import { Popover, Transition } from "@headlessui/react";
 import {
-  XMarkIcon,
   ArrowLeftOnRectangleIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { cx } from "class-variance-authority";
 import { useRouter } from "next/router";
+import { Fragment } from "react";
 
 import { type TabProps } from "@/components/Header";
 import { Link } from "@/ui/Link";
+import { useAuth } from "@clerk/nextjs";
 
 interface MobileNavigationProps {
   tabs: TabProps[];
 }
 
 export const MobileNavigation = ({ tabs }: MobileNavigationProps) => {
-  const { pathname } = useRouter();
+  const { pathname, push } = useRouter();
+  const { signOut } = useAuth();
 
   return (
     <Transition.Child
@@ -75,6 +77,10 @@ export const MobileNavigation = ({ tabs }: MobileNavigationProps) => {
               <button
                 type="button"
                 className="ml-auto flex rounded-md p-2 text-accent-5 hover:bg-accent-3 hover:text-white focus:outline-none"
+                onClick={() => {
+                  signOut();
+                  push("/sign-in");
+                }}
               >
                 <ArrowLeftOnRectangleIcon
                   className="mr-2 h-6 w-6"
