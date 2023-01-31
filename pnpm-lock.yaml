@@ -28,7 +28,7 @@ importers:
 
   packages/app:
     specifiers:
-      '@clerk/nextjs': ^4.8.0
+      '@clerk/nextjs': ^4.8.1
       '@headlessui/react': ^1.7.8
       '@heroicons/react': ^2.0.14
       '@loak/config': workspace:*
@@ -52,7 +52,7 @@ importers:
       tailwindcss: ^3.2.4
       typescript: ^4.9.4
     dependencies:
-      '@clerk/nextjs': 4.8.0_qis4wi3visba34ecotwrk5r6zq
+      '@clerk/nextjs': 4.8.1_qis4wi3visba34ecotwrk5r6zq
       '@headlessui/react': 1.7.8_biqbaboplfbrettd7655fr4n2y
       '@heroicons/react': 2.0.14_react@18.2.0
       '@next/font': 13.1.6
@@ -136,8 +136,8 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@clerk/nextjs/4.8.0_qis4wi3visba34ecotwrk5r6zq:
-    resolution: {integrity: sha512-gj+PP2BqTT47NZr3SyVuQCh1OFKHgR+tcog40e51Iysx2Pp++w8Nme2HMIfdIsYB40kTlGS1oeaYdZiIkcUl8A==}
+  /@clerk/nextjs/4.8.1_qis4wi3visba34ecotwrk5r6zq:
+    resolution: {integrity: sha512-LBLsjTL3Y7+EFyPIY7Tg5ele/MO2NPvsm9t/epHpG3+3m1D4kQkwEAimBu0nRZhJxUJIlEkUsw4wtyKadx6Zpg==}
     engines: {node: '>=14'}
     peerDependencies:
       next: '>=10'
