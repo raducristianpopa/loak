@@ -1,0 +1,59 @@
+name: Loak / CI
+
+on:
+  push:
+    branches:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  check:
+    name: ESLint & Pretier checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: NodeJS & PNPM Setup
+        uses: ./.github/workflows/setup
+
+      - name: Check ESLint and Prettier formatting
+        run: pnpm check
+
+  typecheck:
+    name: Typecheck
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Job Setup
+        uses: ./.github/workflows/setup
+
+      - name: Generate Prisma types
+        run: pnpm app exec prisma generate
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+  app_build:
+    needs: [check, typecheck]
+    name: Build App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Job Setup
+        uses: ./.github/workflows/setup
+
+      - name: Generate Prisma types
+        run: pnpm app exec prisma generate
+
+      - name: Build app
+        env:
+          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
+        run: pnpm app build

@@ -1,13 +1,13 @@
-import { useRouter } from "next/router";
-import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { cx } from "class-variance-authority";
+import { useRouter } from "next/router";
+import { Fragment } from "react";
 
-import { Profile } from "./Profile";
-import { MobileNavigation } from "./MobileNavigation";
 import { Link } from "@/ui/Link";
 import { IconOnlyLogo } from "@/ui/Logo";
+import { MobileNavigation } from "./MobileNavigation";
+import { Profile } from "./Profile";
 
 export interface TabProps {
   name: string;

@@ -3,7 +3,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "typecheck": "tsc --noEmit"
     },
     "dependencies": {
         "@clerk/nextjs": "^4.8.0",

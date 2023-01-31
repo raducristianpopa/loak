@@ -1,7 +1,6 @@
 {
     "extends": "./tsconfig.base.json",
     "compilerOptions": {
-        "incremental": true,
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
         "noEmit": true,
         "isolatedModules": true,
