@@ -16,6 +16,8 @@ module.exports = {
                 "accent-7": "#777",
                 "accent-8": "#888",
                 "accent-9": "#999",
+                "accent-10": "#eaeaea",
+                "accent-11": "#fafafa",
             },
         },
     },

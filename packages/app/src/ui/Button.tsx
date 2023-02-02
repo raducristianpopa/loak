@@ -1,16 +1,13 @@
 import { forwardRef } from "react";
-import { type VariantProps, cva } from "class-variance-authority";
+import { type VariantProps, cva, cx } from "class-variance-authority";
 import ButtonOrLink, { type ButtonOrLinkProps } from "./ButtonOrLink";
 
 const buttonStyles = cva("inline-flex items-center justify-center", {
   variants: {
     intent: {
       primary: [
-        "border",
-        // Light theme
-        "bg-black text-white border-black hover:bg-white hover:text-black",
         // Dark theme
-        "dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white",
+        "border bg-white text-black border-white hover:bg-black hover:text-white",
       ],
       danger: [
         "border bg-red-600 text-white border-red-600 hover:bg-transparent hover:text-red-600",
@@ -38,11 +35,11 @@ export interface ButtonProps
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ intent, size, children, ...props }, ref) => {
+  ({ intent, size, className, children, ...props }, ref) => {
     return (
       <ButtonOrLink
         ref={ref}
-        className={buttonStyles({ intent, size })}
+        className={cx(className, buttonStyles({ intent, size }))}
         {...props}
       >
         {children}

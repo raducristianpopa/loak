@@ -1,6 +1,21 @@
 import { Layout } from "@/components/Layout";
+import { Button } from "@/ui/Button";
+import { Form, useZodForm } from "@/ui/Form";
+import { Input } from "@/ui/Input";
+import { z } from "zod";
+
+const newLinkSchema = z.object({
+  destination: z.string().url({ message: "Invalid URL" }),
+  key: z
+    .string()
+    .min(2, { message: "Key must be at least 3 characters long." }),
+});
 
 export default function CreateLinkPage() {
+  const form = useZodForm({
+    schema: newLinkSchema,
+  });
+
   return (
     <Layout>
       <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-3 lg:gap-8">
@@ -14,6 +29,36 @@ export default function CreateLinkPage() {
                 <h2 className="font-rubik text-2xl font-medium">
                   Create new link
                 </h2>
+                <Form form={form} onSubmit={() => void 0} className="mt-5">
+                  <Input
+                    type="url"
+                    label="Destination URL"
+                    placeholder="https://github.com/raducristianpopa/loak"
+                    error={form.formState.errors.destination?.message}
+                    {...form.register("destination")}
+                  />
+                  <div className="flex items-center justify-between space-x-4">
+                    <Input
+                      label="Short URL key"
+                      placeholder="https://github.com/raducristianpopa/loak"
+                      error={form.formState.errors.key?.message}
+                      addOn="loak.top/"
+                      fullWidth
+                      {...form.register("key")}
+                      spellCheck={false}
+                    />
+                  </div>
+                  <div className="flex items-end">
+                    <Button
+                      intent="primary"
+                      type="submit"
+                      aria-label="create link"
+                      className="ml-auto"
+                    >
+                      Create link
+                    </Button>
+                  </div>
+                </Form>
               </div>
             </div>
           </section>

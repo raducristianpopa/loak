@@ -16,9 +16,12 @@
         "next": "13.1.6",
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "svix": "^0.75.0"
+        "react-hook-form": "^7.43.0",
+        "svix": "^0.75.0",
+        "zod": "^3.20.2"
     },
     "devDependencies": {
+        "@hookform/resolvers": "^2.9.10",
         "@loak/config": "workspace:*",
         "@prisma/client": "^4.9.0",
         "@tailwindcss/aspect-ratio": "^0.4.2",

@@ -31,6 +31,7 @@ importers:
       '@clerk/nextjs': ^4.8.1
       '@headlessui/react': ^1.7.8
       '@heroicons/react': ^2.0.14
+      '@hookform/resolvers': ^2.9.10
       '@loak/config': workspace:*
       '@next/font': 13.1.6
       '@prisma/client': ^4.9.0
@@ -48,9 +49,11 @@ importers:
       prisma: ^4.9.0
       react: 18.2.0
       react-dom: 18.2.0
+      react-hook-form: ^7.43.0
       svix: ^0.75.0
       tailwindcss: ^3.2.4
       typescript: ^4.9.4
+      zod: ^3.20.2
     dependencies:
       '@clerk/nextjs': 4.8.1_qis4wi3visba34ecotwrk5r6zq
       '@headlessui/react': 1.7.8_biqbaboplfbrettd7655fr4n2y
@@ -61,8 +64,11 @@ importers:
       next: 13.1.6_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      react-hook-form: 7.43.0_react@18.2.0
       svix: 0.75.0
+      zod: 3.20.2
     devDependencies:
+      '@hookform/resolvers': 2.9.10_react-hook-form@7.43.0
       '@loak/config': link:../config
       '@prisma/client': 4.9.0_prisma@4.9.0
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.4
@@ -211,6 +217,14 @@ packages:
     dependencies:
       react: 18.2.0
     dev: false
+
+  /@hookform/resolvers/2.9.10_react-hook-form@7.43.0:
+    resolution: {integrity: sha512-JIL1DgJIlH9yuxcNGtyhsWX/PgNltz+5Gr6+8SX9fhXc/hPbEIk6wPI82nhgvp3uUb6ZfAM5mqg/x7KR7NAb+A==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.43.0_react@18.2.0
+    dev: true
 
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
@@ -2495,6 +2509,14 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-hook-form/7.43.0_react@18.2.0:
+    resolution: {integrity: sha512-/rVEz7T0gLdSFwPqutJ1kn2e0sQNyb9ci/hmwEYr2YG0KF/LSuRLvNrf9QWJM+gj88CjDpDW5Bh/1AD7B2+z9Q==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
@@ -2529,7 +2551,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /read-cache/1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -3065,3 +3086,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod/3.20.2:
+    resolution: {integrity: sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==}
+    dev: false
