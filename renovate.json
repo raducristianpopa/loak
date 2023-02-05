@@ -1,6 +1,9 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:base"],
+    "branchPrefix": "renovate--",
+    "prHourlyLimit": 2,
+    "rebaseWhen": "conflicted",
+    "rangeStrategy": "bump",
+    "prCreation": "not-pending"
 }
