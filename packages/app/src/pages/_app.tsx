@@ -1,3 +1,4 @@
+import { trpc } from "@/lib/trpc";
 import "@/styles/main.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Karla, Rubik } from "@next/font/google";
@@ -15,7 +16,7 @@ const karla = Karla({
   variable: "--font-karla",
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <ClerkProvider>
       <main
@@ -26,3 +27,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </ClerkProvider>
   );
 }
+
+export default trpc.withTRPC(App);

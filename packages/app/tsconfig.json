@@ -1,6 +1,7 @@
 {
     "extends": "@loak/config/tsconfig.next.json",
     "compilerOptions": {
+        "declaration": false,
         "incremental": true,
         "plugins": [
             {
