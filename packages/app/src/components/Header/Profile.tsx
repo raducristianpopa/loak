@@ -1,9 +1,7 @@
 import { useAuth } from "@clerk/nextjs";
 import { Menu, Transition } from "@headlessui/react";
-import {
-  ArrowLeftOnRectangleIcon,
-  UserCircleIcon,
-} from "@heroicons/react/24/outline";
+import { UserCircleIcon } from "@/icons/UserCircleIcon";
+import { ArrowLeftOnRectangleIcon } from "@/icons/ArrowLeftOnRectangleIcon";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 

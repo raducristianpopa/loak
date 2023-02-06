@@ -1,8 +1,6 @@
 import { Popover, Transition } from "@headlessui/react";
-import {
-  ArrowLeftOnRectangleIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@/icons/XMarkIcon";
+import { ArrowLeftOnRectangleIcon } from "@/icons/ArrowLeftOnRectangleIcon";
 import { cx } from "class-variance-authority";
 import { useRouter } from "next/router";
 import { Fragment } from "react";

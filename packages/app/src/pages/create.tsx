@@ -1,19 +1,22 @@
 import { Layout } from "@/components/Layout";
+import { toast } from "@/lib/toast";
 import { trpc } from "@/lib/trpc";
 import { Button } from "@/ui/Button";
 import { ErrorPanel } from "@/ui/ErrorPanel";
 import { Form, useZodForm } from "@/ui/Form";
 import { Input } from "@/ui/Input";
+import { useRouter } from "next/router";
 import { z } from "zod";
 
 const newLinkSchema = z.object({
-  target: z.string(), //.url({ message: "Invalid URL" }),
+  target: z.string().url({ message: "Invalid URL" }),
   key: z
     .string()
-    .min(2, { message: "Key must be at least 3 characters long." }),
+    .min(3, { message: "Key must be at least 3 characters long." }),
 });
 
 export default function CreateLinkPage() {
+  const router = useRouter();
   const form = useZodForm({
     schema: newLinkSchema,
   });
@@ -22,6 +25,11 @@ export default function CreateLinkPage() {
 
   const onSubmit = form.handleSubmit(({ target, key }) => {
     mutate({ target, key });
+
+    if (!error) {
+      toast("Link was created!", "success");
+      router.push("/");
+    }
   });
 
   return (

@@ -1,4 +1,4 @@
-import { XCircleIcon } from "@heroicons/react/20/solid";
+import { XCircleIcon } from "@/icons/XCircleIcon";
 
 type ErrorPanelProps = {
   message: string;

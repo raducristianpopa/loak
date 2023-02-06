@@ -1,5 +1,6 @@
 import { Popover, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars } from "@/icons/Bars";
+import { XMarkIcon } from "@/icons/XMarkIcon";
 import { cx } from "class-variance-authority";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
@@ -49,7 +50,7 @@ const Header = () => {
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    <Bars className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Popover.Button>
               </div>
