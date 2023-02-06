@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "@clerk/nextjs": "^4.8.2",
-        "@headlessui/react": "^1.7.8",
+        "@headlessui/react": "^1.7.10",
         "@next/font": "13.1.6",
         "@tanstack/react-query": "^4.24.4",
         "@trpc/client": "^10.10.0",
