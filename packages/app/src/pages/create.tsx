@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { trpc } from "@/lib/trpc";
 import { Button } from "@/ui/Button";
+import { ErrorPanel } from "@/ui/ErrorPanel";
 import { Form, useZodForm } from "@/ui/Form";
 import { Input } from "@/ui/Input";
 import { z } from "zod";
@@ -13,16 +14,14 @@ const newLinkSchema = z.object({
 });
 
 export default function CreateLinkPage() {
-  const mutation = trpc.link.create.useMutation({});
-
   const form = useZodForm({
     schema: newLinkSchema,
   });
-  type test = z.inferFlattenedErrors<typeof newLinkSchema>;
-  const onSubmit = form.handleSubmit(async ({ target, key }) => {
-    await mutation.mutateAsync({ target, key });
-    alert(mutation.error?.message);
-    alert(mutation.error?.data);
+
+  const { mutate, error } = trpc.link.create.useMutation();
+
+  const onSubmit = form.handleSubmit(({ target, key }) => {
+    mutate({ target, key });
   });
 
   return (
@@ -35,10 +34,12 @@ export default function CreateLinkPage() {
             </h2>
             <div className="overflow-hidden rounded-lg border-4 border-accent-1 bg-black">
               <div className="p-6">
-                <h2 className="font-rubik text-2xl font-medium">
-                  <span></span>
+                <h2 className="mb-2 font-rubik text-2xl font-medium">
                   Create new link
                 </h2>
+                {error && (
+                  <ErrorPanel message="Please make sure all fields are filled correctly!" />
+                )}
                 <Form form={form} onSubmit={onSubmit} className="mt-5">
                   <Input
                     // type="url"
