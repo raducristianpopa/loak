@@ -29,7 +29,7 @@ importers:
   packages/app:
     specifiers:
       '@clerk/nextjs': ^4.8.2
-      '@headlessui/react': ^1.7.8
+      '@headlessui/react': ^1.7.10
       '@hookform/resolvers': ^2.9.10
       '@loak/config': workspace:*
       '@next/font': 13.1.6
@@ -63,7 +63,7 @@ importers:
       zod: ^3.20.2
     dependencies:
       '@clerk/nextjs': 4.8.2_qis4wi3visba34ecotwrk5r6zq
-      '@headlessui/react': 1.7.8_biqbaboplfbrettd7655fr4n2y
+      '@headlessui/react': 1.7.10_biqbaboplfbrettd7655fr4n2y
       '@next/font': 13.1.6
       '@tanstack/react-query': 4.24.4_biqbaboplfbrettd7655fr4n2y
       '@trpc/client': 10.10.0_@trpc+server@10.10.0
@@ -212,8 +212,8 @@ packages:
       - supports-color
     dev: true
 
-  /@headlessui/react/1.7.8_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-zcwb0kd7L05hxmoAMIioEaOn235Dg0fUO+iGbLPgLVSjzl/l39V6DTpC2Df49PE5aG5/f5q0PZ9ZHZ78ENNV+A==}
+  /@headlessui/react/1.7.10_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-1m66h/5eayTEZVT2PI13/2PG3EVC7a9XalmUtVSC8X76pcyKYMuyX1XAL2RUtCr8WhoMa/KrDEyoeU5v+kSQOw==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
