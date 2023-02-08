@@ -45,7 +45,7 @@ importers:
       '@types/node': 18.13.0
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
-      '@upstash/redis': ^1.19.3
+      '@upstash/redis': ^1.20.0
       autoprefixer: ^10.4.13
       class-variance-authority: ^0.4.0
       micro: ^10.0.1
@@ -70,7 +70,7 @@ importers:
       '@trpc/next': 10.10.0_ngwrfmgr4sjzncpabpxzk5etba
       '@trpc/react-query': 10.10.0_5mhyv2iryamqlilh5gtjpyz23q
       '@trpc/server': 10.10.0
-      '@upstash/redis': 1.19.3
+      '@upstash/redis': 1.20.0
       class-variance-authority: 0.4.0_typescript@4.9.5
       micro: 10.0.1
       next: 13.1.6_biqbaboplfbrettd7655fr4n2y
@@ -799,8 +799,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@upstash/redis/1.19.3:
-    resolution: {integrity: sha512-s65cUpjMIrUeRy0oxhDwo2vwbHbs1FawVl3bsNioXqRqISTNLMqDtgktaefei4/V1DI+eymvbz32m0CpFJZPKQ==}
+  /@upstash/redis/1.20.0:
+    resolution: {integrity: sha512-jhOfwBF/dZpx0Gd139YB2KTXqkBrB1fksK0jzSqep5QZyN1cfcZUy5QfcSen5EEdYyUSmWefBzNqGWSJustsJg==}
     dependencies:
       isomorphic-fetch: 3.0.0
     transitivePeerDependencies:
