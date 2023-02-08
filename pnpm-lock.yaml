@@ -30,7 +30,7 @@ importers:
     specifiers:
       '@clerk/nextjs': ^4.9.1
       '@headlessui/react': ^1.7.10
-      '@hookform/resolvers': ^2.9.10
+      '@hookform/resolvers': ^2.9.11
       '@loak/config': workspace:*
       '@next/font': 13.1.6
       '@prisma/client': ^4.9.0
@@ -82,7 +82,7 @@ importers:
       svix: 0.76.1
       zod: 3.20.2
     devDependencies:
-      '@hookform/resolvers': 2.9.10_react-hook-form@7.43.1
+      '@hookform/resolvers': 2.9.11_react-hook-form@7.43.1
       '@loak/config': link:../config
       '@prisma/client': 4.9.0_prisma@4.9.0
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.4
@@ -224,8 +224,8 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@hookform/resolvers/2.9.10_react-hook-form@7.43.1:
-    resolution: {integrity: sha512-JIL1DgJIlH9yuxcNGtyhsWX/PgNltz+5Gr6+8SX9fhXc/hPbEIk6wPI82nhgvp3uUb6ZfAM5mqg/x7KR7NAb+A==}
+  /@hookform/resolvers/2.9.11_react-hook-form@7.43.1:
+    resolution: {integrity: sha512-bA3aZ79UgcHj7tFV7RlgThzwSSHZgvfbt2wprldRkYBcMopdMvHyO17Wwp/twcJasNFischFfS7oz8Katz8DdQ==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
