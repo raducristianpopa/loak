@@ -24,7 +24,7 @@
         "react-hook-form": "^7.43.1",
         "react-hot-toast": "^2.4.0",
         "superjson": "^1.12.2",
-        "svix": "^0.76.1",
+        "svix": "^0.78.0",
         "zod": "^3.20.6"
     },
     "devDependencies": {
