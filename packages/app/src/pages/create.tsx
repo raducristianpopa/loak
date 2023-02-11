@@ -21,10 +21,10 @@ export default function CreateLinkPage() {
     schema: newLinkSchema,
   });
 
-  const { mutate, error } = trpc.link.create.useMutation();
+  const { mutateAsync, error } = trpc.link.create.useMutation();
 
-  const onSubmit = form.handleSubmit(({ target, key }) => {
-    mutate({ target, key });
+  const onSubmit = form.handleSubmit(async ({ target, key }) => {
+    await mutateAsync({ target, key });
 
     if (!error) {
       toast("Link was created!", "success");
@@ -92,6 +92,7 @@ export default function CreateLinkPage() {
                 <h2 className="font-rubik text-2xl font-medium">
                   Social previews
                 </h2>
+                <p>Coming soon!</p>
               </div>
             </div>
           </section>

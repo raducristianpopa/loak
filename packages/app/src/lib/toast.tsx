@@ -8,7 +8,6 @@ export const toast = (
   variant: "success",
   duration = TOAST_VISIBLE_DURATION,
 ) => {
-  console.log("test");
   switch (variant) {
     case "success":
       reactHotToast.custom((_t) => <SuccessToast message={message} />, {

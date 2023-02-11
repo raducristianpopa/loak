@@ -1,8 +1,29 @@
+import { prisma } from "@/lib/prisma";
 import { createLink } from "@/lib/services/link";
 import { z } from "zod";
 import { router, protectedProcedure } from "../root";
 
 export const linkRouter = router({
+    get: protectedProcedure.query(async ({ ctx }) => {
+        const { user } = ctx;
+
+        const links = prisma.link.findMany({
+            where: {
+                userId: user.id,
+            },
+            select: {
+                id: true,
+                domain: true,
+                key: true,
+                targetUrl: true,
+                clicks: true,
+                createdAt: true,
+                archived: true,
+            },
+        });
+
+        return links;
+    }),
     create: protectedProcedure
         .input(
             z.object({

@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { Link } from "@/ui/Link";
+import { LinksList } from "@/components/LinksList";
 
 export default function Home() {
   return (
@@ -11,9 +11,7 @@ export default function Home() {
               Your Links
             </h2>
             <div className="overflow-hidden rounded-lg border-4 border-accent-1 bg-black">
-              <div className="p-6">
-                <Link href="/add">Create new link</Link>
-              </div>
+              <LinksList />
             </div>
           </section>
         </div>

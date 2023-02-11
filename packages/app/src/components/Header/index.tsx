@@ -17,6 +17,7 @@ export interface TabProps {
 
 const tabs: TabProps[] = [
   { name: "Links", href: "/" },
+  { name: "Create", href: "/create" },
   { name: "Settings", href: "/settings" },
 ];
 
