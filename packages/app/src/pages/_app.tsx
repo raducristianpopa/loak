@@ -1,5 +1,7 @@
-import { trpc } from "@/lib/trpc";
+import { useApollo } from "@/lib/apollo";
+// import { trpc } from "@/lib/trpc";
 import "@/styles/main.css";
+import { ApolloProvider } from "@apollo/client";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Karla, Rubik } from "@next/font/google";
 import type { AppProps } from "next/app";
@@ -24,19 +26,21 @@ const karla = Karla({
   variable: "--font-karla",
 });
 
-function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
+  const client = useApollo(pageProps.initialClientState);
+
   return (
     <>
       <ClerkProvider>
-        <main
-          className={`min-h-screen w-full ${rubik.variable} ${karla.variable} font-karla`}
-        >
-          <Component {...pageProps} />
-        </main>
-        <Toaster />
+        <ApolloProvider client={client}>
+          <main
+            className={`min-h-screen w-full ${rubik.variable} ${karla.variable} font-karla`}
+          >
+            <Component {...pageProps} />
+          </main>
+          <Toaster />
+        </ApolloProvider>
       </ClerkProvider>
     </>
   );
 }
-
-export default trpc.withTRPC(App);

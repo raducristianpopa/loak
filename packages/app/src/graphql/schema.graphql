@@ -1,0 +1,63 @@
+input CreateLinkInput {
+  key: String!
+  target: String!
+}
+
+scalar DateTime
+
+type Link implements Node {
+  archived: Boolean!
+  createdAt: DateTime!
+  domain: String!
+  id: ID!
+  key: String!
+  targetUrl: String!
+}
+
+type Mutation {
+  createLink(input: CreateLinkInput!): Link!
+}
+
+interface Node {
+  id: ID!
+}
+
+type PageInfo {
+  endCursor: String
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+}
+
+type Query {
+  links(after: String, before: String, first: Int, last: Int): QueryLinksConnection!
+  node(id: ID!): Node
+  nodes(ids: [ID!]!): [Node]!
+  viewer: User
+}
+
+type QueryLinksConnection {
+  edges: [QueryLinksConnectionEdge!]!
+  pageInfo: PageInfo!
+}
+
+type QueryLinksConnectionEdge {
+  cursor: String!
+  node: Link!
+}
+
+type User implements Node {
+  email: String!
+  id: ID!
+  links(after: String, before: String, first: Int, last: Int): UserLinksConnection!
+}
+
+type UserLinksConnection {
+  edges: [UserLinksConnectionEdge]!
+  pageInfo: PageInfo!
+}
+
+type UserLinksConnectionEdge {
+  cursor: String!
+  node: Link!
+}

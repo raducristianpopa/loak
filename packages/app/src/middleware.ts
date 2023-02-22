@@ -1,7 +1,7 @@
 import { getAuth, withClerkMiddleware } from "@clerk/nextjs/server";
 import { NextResponse, type NextRequest } from "next/server";
 
-const publicPaths = ["/sign-in*", "/api/clerk*"];
+const publicPaths = ["/sign-in*", "/api/clerk*", "/api/graphql*"];
 
 const isPublicPath = (path: string) => {
     return publicPaths.find((x) =>
@@ -14,6 +14,11 @@ export default withClerkMiddleware((req: NextRequest) => {
     const isPublic = isPublicPath(req.nextUrl.pathname);
 
     // If the user exists and tries to go to the sign in page, redirect to base path
+
+    if (userId && req.nextUrl.pathname === "/api/graphql") {
+        return NextResponse.next();
+    }
+
     if (userId && isPublic) {
         const homeUrl = new URL("/", req.url);
         return NextResponse.redirect(homeUrl);
