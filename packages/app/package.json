@@ -41,6 +41,7 @@
     "devDependencies": {
         "@hookform/resolvers": "^2.9.11",
         "@loak/config": "workspace:*",
+        "@next/bundle-analyzer": "^13.1.6",
         "@prisma/client": "^4.10.1",
         "@tailwindcss/aspect-ratio": "^0.4.2",
         "@tailwindcss/forms": "^0.5.3",

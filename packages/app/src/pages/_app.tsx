@@ -1,5 +1,4 @@
 import { useApollo } from "@/lib/apollo";
-// import { trpc } from "@/lib/trpc";
 import "@/styles/main.css";
 import { ApolloProvider } from "@apollo/client";
 import { ClerkProvider } from "@clerk/nextjs";

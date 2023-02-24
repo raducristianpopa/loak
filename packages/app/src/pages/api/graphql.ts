@@ -9,8 +9,17 @@ export default createYoga<{
     req: NextApiRequest;
     res: NextApiResponse;
 }>({
+    graphiql: {
+        additionalHeaders: {
+            "X-CSRF-Trick": "LOAK",
+        },
+    },
     schema,
     context: async ({ req, res }): Promise<Context> => {
+        if (req.method === "POST" && req.headers["x-csrf-trick"] !== "LOAK") {
+            res.status(400).end("Missing CSRF verification.");
+        }
+
         const { userId } = getAuth(req);
         const clerkUser = userId
             ? ((await clerkClient.users.getUser(

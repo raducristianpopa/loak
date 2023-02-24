@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { redis } from "@/lib/redis";
 import { z } from "zod";
 import { builder } from "../builder";
 
@@ -61,7 +62,7 @@ builder.mutationField("createLink", (t) =>
             }),
         },
         resolve: async (_query, _root, { input }, { user }) => {
-            return prisma.link.create({
+            const link = await prisma.link.create({
                 data: {
                     targetUrl: input.target,
                     key: input.key,
@@ -69,6 +70,14 @@ builder.mutationField("createLink", (t) =>
                     userId: user?.id,
                 },
             });
+
+            await redis.set(
+                `${link.domain}:${link.key}`,
+                { url: link.targetUrl },
+                { nx: true },
+            );
+
+            return link;
         },
     }),
 );
