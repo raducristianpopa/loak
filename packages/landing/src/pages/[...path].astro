@@ -1,6 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { redis } from '../lib/redis';
+
+type Link = {
+    url: string
+}
+
+const { request, url } = Astro;
+
+const domain = request.headers.get('domain') || "loak.top";
+const path = url.pathname;
+const key = decodeURIComponent(path).slice(1);
+console.log(domain, key, path)
+if (domain && key && path !== '/'){
+    
+    const response = await redis.get<Link>(`${domain}:${key}`);
+        console.log(response)
+    const { url } = response || {} 
+
+    if (url) { 
+        return Astro.redirect(url);
+    }
+}
 ---
 
 <Layout title="Welcome to Astro.">

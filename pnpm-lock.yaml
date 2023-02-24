@@ -126,8 +126,10 @@ importers:
 
   packages/landing:
     specifiers:
+      '@upstash/redis': ^1.20.0
       astro: ^2.0.14
     dependencies:
+      '@upstash/redis': 1.20.0
       astro: 2.0.14
 
 packages:
