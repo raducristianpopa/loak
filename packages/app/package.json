@@ -37,7 +37,7 @@
         "react-dom": "18.2.0",
         "react-hook-form": "^7.43.1",
         "react-hot-toast": "^2.4.0",
-        "svix": "^0.78.0",
+        "svix": "^0.80.0",
         "zod": "^3.20.6"
     },
     "devDependencies": {
