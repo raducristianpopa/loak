@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { clerkClient } from "@clerk/nextjs/server";
 import { RESERVED_KEYS } from "./constants";
-import { User as ClerkUser } from "@clerk/nextjs/api";
+import type { User as ClerkUser } from "@clerk/nextjs/api";
 
 export const keyExists = async (
     domain: string,

@@ -1,17 +1,10 @@
-import { useApollo } from "@/lib/apollo";
 import "@/styles/main.css";
+import { useApollo } from "@/lib/apollo";
 import { ApolloProvider } from "@apollo/client";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Karla, Rubik } from "@next/font/google";
 import type { AppProps } from "next/app";
-import dynamic from "next/dynamic";
-
-const Toaster = dynamic(
-  () => import("react-hot-toast").then((c) => c.Toaster),
-  {
-    ssr: false,
-  },
-);
+import { Toaster } from "react-hot-toast";
 
 const rubik = Rubik({
   subsets: ["latin"],

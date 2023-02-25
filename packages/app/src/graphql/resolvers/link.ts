@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { redis } from "@/lib/redis";
+import { decodeGlobalID } from "@pothos/plugin-relay";
 import { z } from "zod";
 import { builder } from "../builder";
 
@@ -78,6 +79,35 @@ builder.mutationField("createLink", (t) =>
             );
 
             return link;
+        },
+    }),
+);
+
+builder.mutationField("archiveLink", (t) =>
+    t.prismaField({
+        type: "Link",
+        args: {
+            id: t.arg.id({ required: true }),
+        },
+        nullable: true,
+        resolve: async (_query, _root, { id }, { user }) => {
+            const { id: linkId } = decodeGlobalID(id);
+
+            const link = await prisma.link.findFirstOrThrow({
+                where: {
+                    id: linkId,
+                    userId: user?.id,
+                },
+            });
+
+            return prisma.link.update({
+                where: {
+                    id: link.id,
+                },
+                data: {
+                    archived: !link.archived,
+                },
+            });
         },
     }),
 );

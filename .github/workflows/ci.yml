@@ -8,6 +8,11 @@ on:
       - opened
       - synchronize
 
+env:
+  NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
+  UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+  UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+
 jobs:
   check:
     name: ESLint & Pretier checks
@@ -36,6 +41,9 @@ jobs:
       - name: Generate Prisma types
         run: pnpm app exec prisma generate
 
+      - name: Generate GraphQL schema and types
+        run: pnpm app codegen
+
       - name: Typecheck
         run: pnpm typecheck
 
@@ -53,7 +61,8 @@ jobs:
       - name: Generate Prisma types
         run: pnpm app exec prisma generate
 
+      - name: Generate GraphQL schema and types
+        run: pnpm app codegen
+
       - name: Build app
-        env:
-          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
         run: pnpm app build

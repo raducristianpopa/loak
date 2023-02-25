@@ -15,6 +15,7 @@ type Link implements Node {
 }
 
 type Mutation {
+  archiveLink(id: ID!): Link
   createLink(input: CreateLinkInput!): Link!
 }
 
