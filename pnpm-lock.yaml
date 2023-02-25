@@ -42,7 +42,7 @@ importers:
       '@pothos/core': ^3.27.0
       '@pothos/plugin-errors': ^3.11.0
       '@pothos/plugin-prisma': ^3.41.1
-      '@pothos/plugin-relay': ^3.35.0
+      '@pothos/plugin-relay': ^3.37.0
       '@pothos/plugin-scope-auth': ^3.18.0
       '@pothos/plugin-simple-objects': ^3.6.7
       '@pothos/plugin-validation': ^3.9.0
@@ -86,7 +86,7 @@ importers:
       '@pothos/core': 3.27.0_graphql@16.6.0
       '@pothos/plugin-errors': 3.11.0_33jmmrikvlx7rfwjdmbhyl5fva
       '@pothos/plugin-prisma': 3.41.1_tex7bkoygghkkziptudpgujlv4
-      '@pothos/plugin-relay': 3.35.0_33jmmrikvlx7rfwjdmbhyl5fva
+      '@pothos/plugin-relay': 3.37.0_33jmmrikvlx7rfwjdmbhyl5fva
       '@pothos/plugin-scope-auth': 3.18.0_33jmmrikvlx7rfwjdmbhyl5fva
       '@pothos/plugin-simple-objects': 3.6.7_33jmmrikvlx7rfwjdmbhyl5fva
       '@pothos/plugin-validation': 3.9.0_bjzlpzq7k7hxdh7t2mqt7nevei
@@ -2180,8 +2180,8 @@ packages:
       - supports-color
     dev: false
 
-  /@pothos/plugin-relay/3.35.0_33jmmrikvlx7rfwjdmbhyl5fva:
-    resolution: {integrity: sha512-I8iTSl7YIrbmWq5cC1xp55eL14fFyXEOk96sfq5r/9Up5NxPyZOX9OSqz6ZVyrSheAGCDvV5Dc3uh3tX4aZ8oQ==}
+  /@pothos/plugin-relay/3.37.0_33jmmrikvlx7rfwjdmbhyl5fva:
+    resolution: {integrity: sha512-b8g4PzMj1aecV+9jb/maFu5RE+6Ja/SNmMOnFRC6H3mosbt1KW+hfDtQPXDX52ZHzRhtuN8LlYkvK2lLYc8syg==}
     peerDependencies:
       '@pothos/core': '*'
       graphql: '>=15.1.0'
