@@ -41,7 +41,7 @@ importers:
       '@next/font': 13.1.6
       '@pothos/core': ^3.25.0
       '@pothos/plugin-errors': ^3.11.0
-      '@pothos/plugin-prisma': ^3.41.0
+      '@pothos/plugin-prisma': ^3.41.1
       '@pothos/plugin-relay': ^3.35.0
       '@pothos/plugin-scope-auth': ^3.18.0
       '@pothos/plugin-simple-objects': ^3.6.7
@@ -85,7 +85,7 @@ importers:
       '@next/font': 13.1.6
       '@pothos/core': 3.25.0_graphql@16.6.0
       '@pothos/plugin-errors': 3.11.0_z63nx7ebcmur2xl7ugctlosy3u
-      '@pothos/plugin-prisma': 3.41.0_d46j5ahm3uzilkclijti7n4ybi
+      '@pothos/plugin-prisma': 3.41.1_d46j5ahm3uzilkclijti7n4ybi
       '@pothos/plugin-relay': 3.35.0_z63nx7ebcmur2xl7ugctlosy3u
       '@pothos/plugin-scope-auth': 3.18.0_z63nx7ebcmur2xl7ugctlosy3u
       '@pothos/plugin-simple-objects': 3.6.7_z63nx7ebcmur2xl7ugctlosy3u
@@ -2291,8 +2291,8 @@ packages:
       graphql: 16.6.0
     dev: false
 
-  /@pothos/plugin-prisma/3.41.0_d46j5ahm3uzilkclijti7n4ybi:
-    resolution: {integrity: sha512-1GcSG4YB2Y083phwUaelUq79CACMXKlsRsFIE3vk90lIlJVDsgzJQLe/OrEEFaE/YSPiSUU2y9WOuGXodpTeAQ==}
+  /@pothos/plugin-prisma/3.41.1_d46j5ahm3uzilkclijti7n4ybi:
+    resolution: {integrity: sha512-O5MPZUQqqLFfEczFayXxj2R3yUbXtN+I18/XvzJN3rg0eFvqI0ciPpivXY2ezGRLNUtTnB1/saTb+W4ck8qQyg==}
     hasBin: true
     peerDependencies:
       '@pothos/core': '*'
