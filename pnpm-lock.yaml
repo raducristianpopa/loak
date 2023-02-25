@@ -39,7 +39,7 @@ importers:
       '@loak/config': workspace:*
       '@next/bundle-analyzer': ^13.1.6
       '@next/font': 13.1.6
-      '@pothos/core': ^3.25.0
+      '@pothos/core': ^3.27.0
       '@pothos/plugin-errors': ^3.11.0
       '@pothos/plugin-prisma': ^3.41.1
       '@pothos/plugin-relay': ^3.35.0
@@ -83,13 +83,13 @@ importers:
       '@graphql-codegen/typescript-operations': 3.0.0_graphql@16.6.0
       '@headlessui/react': 1.7.12_biqbaboplfbrettd7655fr4n2y
       '@next/font': 13.1.6
-      '@pothos/core': 3.25.0_graphql@16.6.0
-      '@pothos/plugin-errors': 3.11.0_z63nx7ebcmur2xl7ugctlosy3u
-      '@pothos/plugin-prisma': 3.41.1_d46j5ahm3uzilkclijti7n4ybi
-      '@pothos/plugin-relay': 3.35.0_z63nx7ebcmur2xl7ugctlosy3u
-      '@pothos/plugin-scope-auth': 3.18.0_z63nx7ebcmur2xl7ugctlosy3u
-      '@pothos/plugin-simple-objects': 3.6.7_z63nx7ebcmur2xl7ugctlosy3u
-      '@pothos/plugin-validation': 3.9.0_dxa46g4iv7327xvy5phbsv3qdy
+      '@pothos/core': 3.27.0_graphql@16.6.0
+      '@pothos/plugin-errors': 3.11.0_33jmmrikvlx7rfwjdmbhyl5fva
+      '@pothos/plugin-prisma': 3.41.1_tex7bkoygghkkziptudpgujlv4
+      '@pothos/plugin-relay': 3.35.0_33jmmrikvlx7rfwjdmbhyl5fva
+      '@pothos/plugin-scope-auth': 3.18.0_33jmmrikvlx7rfwjdmbhyl5fva
+      '@pothos/plugin-simple-objects': 3.6.7_33jmmrikvlx7rfwjdmbhyl5fva
+      '@pothos/plugin-validation': 3.9.0_bjzlpzq7k7hxdh7t2mqt7nevei
       '@upstash/redis': 1.20.0
       class-variance-authority: 0.4.0_typescript@4.9.5
       dayjs: 1.11.7
@@ -2144,25 +2144,25 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@pothos/core/3.25.0_graphql@16.6.0:
-    resolution: {integrity: sha512-KI8IrpUww4YiCM3TWLHfOD4nfTUYH4Y/w6PuMARHKD9LyVQUDwPFKVZuIzQez/yssppo29SJlCJFH9Dz/CS4Vw==}
+  /@pothos/core/3.27.0_graphql@16.6.0:
+    resolution: {integrity: sha512-Ox+7yV1Fp4MNoiWJX+OFJ4DkidWbg5gcWF+AYFIgOplkjIXEbuFj/x0+OrDBu4herZZS2N2GeRZjwvqv1EiDQA==}
     peerDependencies:
       graphql: '>=15.1.0'
     dependencies:
       graphql: 16.6.0
     dev: false
 
-  /@pothos/plugin-errors/3.11.0_z63nx7ebcmur2xl7ugctlosy3u:
+  /@pothos/plugin-errors/3.11.0_33jmmrikvlx7rfwjdmbhyl5fva:
     resolution: {integrity: sha512-UsU4lQcspMkwlEgfRMXD/APYYccaGn21gSW3QOGNfIV2Rt8eNp+qAo7f3Lo8J8XGhChU50fKHS6XFFcEgvclXw==}
     peerDependencies:
       '@pothos/core': '*'
       graphql: '>=15.1.0'
     dependencies:
-      '@pothos/core': 3.25.0_graphql@16.6.0
+      '@pothos/core': 3.27.0_graphql@16.6.0
       graphql: 16.6.0
     dev: false
 
-  /@pothos/plugin-prisma/3.41.1_d46j5ahm3uzilkclijti7n4ybi:
+  /@pothos/plugin-prisma/3.41.1_tex7bkoygghkkziptudpgujlv4:
     resolution: {integrity: sha512-O5MPZUQqqLFfEczFayXxj2R3yUbXtN+I18/XvzJN3rg0eFvqI0ciPpivXY2ezGRLNUtTnB1/saTb+W4ck8qQyg==}
     hasBin: true
     peerDependencies:
@@ -2171,7 +2171,7 @@ packages:
       graphql: '>=15.1.0'
       typescript: '>=4.7.2'
     dependencies:
-      '@pothos/core': 3.25.0_graphql@16.6.0
+      '@pothos/core': 3.27.0_graphql@16.6.0
       '@prisma/client': 4.10.1_prisma@4.10.1
       '@prisma/generator-helper': 4.10.1
       graphql: 16.6.0
@@ -2180,44 +2180,44 @@ packages:
       - supports-color
     dev: false
 
-  /@pothos/plugin-relay/3.35.0_z63nx7ebcmur2xl7ugctlosy3u:
+  /@pothos/plugin-relay/3.35.0_33jmmrikvlx7rfwjdmbhyl5fva:
     resolution: {integrity: sha512-I8iTSl7YIrbmWq5cC1xp55eL14fFyXEOk96sfq5r/9Up5NxPyZOX9OSqz6ZVyrSheAGCDvV5Dc3uh3tX4aZ8oQ==}
     peerDependencies:
       '@pothos/core': '*'
       graphql: '>=15.1.0'
     dependencies:
-      '@pothos/core': 3.25.0_graphql@16.6.0
+      '@pothos/core': 3.27.0_graphql@16.6.0
       graphql: 16.6.0
     dev: false
 
-  /@pothos/plugin-scope-auth/3.18.0_z63nx7ebcmur2xl7ugctlosy3u:
+  /@pothos/plugin-scope-auth/3.18.0_33jmmrikvlx7rfwjdmbhyl5fva:
     resolution: {integrity: sha512-HIVjLyYY85Yea6lRMJoWE3BpVUIuOLXZ8Ux3y8SW0T+nSaf+GmAedP2khGwFETnOy3UCcEwNJmwccF+ldiifQw==}
     peerDependencies:
       '@pothos/core': '*'
       graphql: '>=15.1.0'
     dependencies:
-      '@pothos/core': 3.25.0_graphql@16.6.0
+      '@pothos/core': 3.27.0_graphql@16.6.0
       graphql: 16.6.0
     dev: false
 
-  /@pothos/plugin-simple-objects/3.6.7_z63nx7ebcmur2xl7ugctlosy3u:
+  /@pothos/plugin-simple-objects/3.6.7_33jmmrikvlx7rfwjdmbhyl5fva:
     resolution: {integrity: sha512-2ME7NSJZMh7MFAsTScHRiZusrLd5qpMBT/zgfmlGSGZgTFOUj38fWkQGYTFbFxTP4uClEcf9GW3aAkwLmH2ATw==}
     peerDependencies:
       '@pothos/core': '*'
       graphql: '>=15.1.0'
     dependencies:
-      '@pothos/core': 3.25.0_graphql@16.6.0
+      '@pothos/core': 3.27.0_graphql@16.6.0
       graphql: 16.6.0
     dev: false
 
-  /@pothos/plugin-validation/3.9.0_dxa46g4iv7327xvy5phbsv3qdy:
+  /@pothos/plugin-validation/3.9.0_bjzlpzq7k7hxdh7t2mqt7nevei:
     resolution: {integrity: sha512-w2Q52l8JnhceKfDzuX1zOfspTZPc3gxxixgt10y1bB/h/kD2n/xwYXmAOLqyIN+TTr0Bi8/udYUDAAtWn9Q67A==}
     peerDependencies:
       '@pothos/core': '*'
       graphql: '>=15.1.0'
       zod: '*'
     dependencies:
-      '@pothos/core': 3.25.0_graphql@16.6.0
+      '@pothos/core': 3.27.0_graphql@16.6.0
       graphql: 16.6.0
       zod: 3.20.6
     dev: false
