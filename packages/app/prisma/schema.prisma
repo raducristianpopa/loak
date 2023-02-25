@@ -8,6 +8,10 @@ datasource db {
     relationMode = "prisma"
 }
 
+generator pothos {
+    provider = "prisma-pothos-types"
+}
+
 model User {
     id      String @id @default(cuid())
     clerkId String @unique
@@ -17,7 +21,7 @@ model User {
     avatarId String @default(cuid())
 
     categories Category[]
-    Link       Link[]
+    links      Link[]
 }
 
 model Category {

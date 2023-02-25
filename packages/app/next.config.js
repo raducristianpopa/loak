@@ -2,26 +2,10 @@
 const nextConfig = {
     reactStrictMode: true,
     poweredByHeader: false,
-    headers: () => [
-        {
-            source: "/",
-            headers: [
-                {
-                    key: "X-CSRF-Trick",
-                    value: "LOAK_CSRF",
-                },
-            ],
-        },
-        {
-            source: "/:path*",
-            headers: [
-                {
-                    key: "X-CSRF-Trick",
-                    value: "LOAK_CSRF",
-                },
-            ],
-        },
-    ],
 };
 
-module.exports = nextConfig;
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+    enabled: process.env.ANALYZE === "true",
+});
+
+module.exports = withBundleAnalyzer(nextConfig);

@@ -1,16 +1,10 @@
-import { trpc } from "@/lib/trpc";
 import "@/styles/main.css";
+import { useApollo } from "@/lib/apollo";
+import { ApolloProvider } from "@apollo/client";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Karla, Rubik } from "@next/font/google";
 import type { AppProps } from "next/app";
-import dynamic from "next/dynamic";
-
-const Toaster = dynamic(
-  () => import("react-hot-toast").then((c) => c.Toaster),
-  {
-    ssr: false,
-  },
-);
+import { Toaster } from "react-hot-toast";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -24,19 +18,21 @@ const karla = Karla({
   variable: "--font-karla",
 });
 
-function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
+  const client = useApollo(pageProps.initialClientState);
+
   return (
     <>
       <ClerkProvider>
-        <main
-          className={`min-h-screen w-full ${rubik.variable} ${karla.variable} font-karla`}
-        >
-          <Component {...pageProps} />
-        </main>
-        <Toaster />
+        <ApolloProvider client={client}>
+          <main
+            className={`min-h-screen w-full ${rubik.variable} ${karla.variable} font-karla`}
+          >
+            <Component {...pageProps} />
+          </main>
+          <Toaster />
+        </ApolloProvider>
       </ClerkProvider>
     </>
   );
 }
-
-export default trpc.withTRPC(App);
