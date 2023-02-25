@@ -34,7 +34,7 @@ importers:
       '@graphql-codegen/near-operation-file-preset': ^2.5.0
       '@graphql-codegen/typescript': ^3.0.0
       '@graphql-codegen/typescript-operations': ^3.0.0
-      '@headlessui/react': ^1.7.10
+      '@headlessui/react': ^1.7.12
       '@hookform/resolvers': ^2.9.11
       '@loak/config': workspace:*
       '@next/bundle-analyzer': ^13.1.6
@@ -81,7 +81,7 @@ importers:
       '@graphql-codegen/near-operation-file-preset': 2.5.0_graphql@16.6.0
       '@graphql-codegen/typescript': 3.0.0_graphql@16.6.0
       '@graphql-codegen/typescript-operations': 3.0.0_graphql@16.6.0
-      '@headlessui/react': 1.7.10_biqbaboplfbrettd7655fr4n2y
+      '@headlessui/react': 1.7.12_biqbaboplfbrettd7655fr4n2y
       '@next/font': 13.1.6
       '@pothos/core': 3.25.0_graphql@16.6.0
       '@pothos/plugin-errors': 3.11.0_z63nx7ebcmur2xl7ugctlosy3u
@@ -1993,8 +1993,8 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@headlessui/react/1.7.10_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-1m66h/5eayTEZVT2PI13/2PG3EVC7a9XalmUtVSC8X76pcyKYMuyX1XAL2RUtCr8WhoMa/KrDEyoeU5v+kSQOw==}
+  /@headlessui/react/1.7.12_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-FhSx5V+Qp0GvbTpaxyS+ymGDDNntCacClWsk/d8Upbr19g3AsPbjfPk4+m2CgJGcuCB5Dz7LpUIOAbvQTyjL2g==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
