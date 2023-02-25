@@ -61,7 +61,7 @@ importers:
       graphql-yoga: ^3.5.1
       micro: ^10.0.1
       next: 13.1.6
-      node-html-parser: ^6.1.4
+      node-html-parser: ^6.1.5
       postcss: ^8.4.21
       prisma: ^4.10.1
       react: 18.2.0
@@ -97,7 +97,7 @@ importers:
       graphql-yoga: 3.5.1_d3dx4krdt4fsynqrp5lqxelwe4
       micro: 10.0.1
       next: 13.1.6_6m24vuloj5ihw4zc5lbsktc4fu
-      node-html-parser: 6.1.4
+      node-html-parser: 6.1.5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-hook-form: 7.43.1_react@18.2.0
@@ -6205,8 +6205,8 @@ packages:
       whatwg-url: 5.0.0
     dev: false
 
-  /node-html-parser/6.1.4:
-    resolution: {integrity: sha512-3muP9Uy/Pz7bQa9TNYVQzWJhNZMqyCx7xJle8kz2/y1UgzAUyXXShc1IcPaJy6u07CE3K5rQcRwlvHzmlySRjg==}
+  /node-html-parser/6.1.5:
+    resolution: {integrity: sha512-fAaM511feX++/Chnhe475a0NHD8M7AxDInsqQpz6x63GRF7xYNdS8Vo5dKsIVPgsOvG7eioRRTZQnWBrhDHBSg==}
     dependencies:
       css-select: 5.1.0
       he: 1.2.0
