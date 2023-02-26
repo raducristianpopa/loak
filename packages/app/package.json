@@ -12,10 +12,10 @@
     "dependencies": {
         "@apollo/client": "^3.7.9",
         "@clerk/nextjs": "^4.11.1",
-        "@graphql-codegen/cli": "^3.0.0",
+        "@graphql-codegen/cli": "^3.2.1",
         "@graphql-codegen/near-operation-file-preset": "^2.5.0",
-        "@graphql-codegen/typescript": "^3.0.0",
-        "@graphql-codegen/typescript-operations": "^3.0.0",
+        "@graphql-codegen/typescript": "^3.0.1",
+        "@graphql-codegen/typescript-operations": "^3.0.1",
         "@headlessui/react": "^1.7.12",
         "@next/font": "13.2.1",
         "@pothos/core": "^3.27.0",
