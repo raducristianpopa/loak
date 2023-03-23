@@ -18,7 +18,7 @@
         "@graphql-codegen/typescript-operations": "^3.0.1",
         "@headlessui/react": "^1.7.12",
         "@next/font": "13.2.1",
-        "@pothos/core": "^3.27.0",
+        "@pothos/core": "^3.29.0",
         "@pothos/plugin-errors": "^3.11.0",
         "@pothos/plugin-prisma": "^3.41.1",
         "@pothos/plugin-relay": "^3.37.0",
