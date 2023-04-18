@@ -10,7 +10,7 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@upstash/redis": "^1.20.0",
+        "@upstash/redis": "^1.20.4",
         "astro": "^2.0.15"
     }
 }
