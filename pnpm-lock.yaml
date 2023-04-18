@@ -53,7 +53,7 @@ importers:
       '@types/node': 18.14.1
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
-      '@upstash/redis': ^1.20.0
+      '@upstash/redis': ^1.20.4
       autoprefixer: ^10.4.13
       class-variance-authority: ^0.4.0
       dayjs: ^1.11.7
@@ -90,7 +90,7 @@ importers:
       '@pothos/plugin-scope-auth': 3.18.0_33jmmrikvlx7rfwjdmbhyl5fva
       '@pothos/plugin-simple-objects': 3.6.7_33jmmrikvlx7rfwjdmbhyl5fva
       '@pothos/plugin-validation': 3.9.0_bjzlpzq7k7hxdh7t2mqt7nevei
-      '@upstash/redis': 1.20.0
+      '@upstash/redis': 1.20.4
       class-variance-authority: 0.4.0_typescript@4.9.5
       dayjs: 1.11.7
       graphql: 16.6.0
@@ -128,10 +128,10 @@ importers:
 
   packages/landing:
     specifiers:
-      '@upstash/redis': ^1.20.0
+      '@upstash/redis': ^1.20.4
       astro: ^2.0.15
     dependencies:
-      '@upstash/redis': 1.20.0
+      '@upstash/redis': 1.20.4
       astro: 2.0.15
 
 packages:
@@ -2630,8 +2630,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@upstash/redis/1.20.0:
-    resolution: {integrity: sha512-jhOfwBF/dZpx0Gd139YB2KTXqkBrB1fksK0jzSqep5QZyN1cfcZUy5QfcSen5EEdYyUSmWefBzNqGWSJustsJg==}
+  /@upstash/redis/1.20.4:
+    resolution: {integrity: sha512-U7j7py+yPvafB5KS7o+F19j2CWzZCwmQ4Tvs+n2lpCWuw/8CeFtWrFWPtQa5dgrVu6tu+Ki9DmhDiAbgMS5fGA==}
     dependencies:
       isomorphic-fetch: 3.0.0
     transitivePeerDependencies:
